@@ -1,0 +1,163 @@
+{
+  "version": "29.0.0",
+  "artifacts": {
+    "Space-Booker.assets": {
+      "type": "cdk:asset-manifest",
+      "properties": {
+        "file": "Space-Booker.assets.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+      }
+    },
+    "Space-Booker": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://unknown-account/unknown-region",
+      "properties": {
+        "templateFile": "Space-Booker.template.json",
+        "validateOnSynth": false,
+        "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-deploy-role-${AWS::AccountId}-${AWS::Region}",
+        "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-cfn-exec-role-${AWS::AccountId}-${AWS::Region}",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/b25f85b46a7076e3ffe303b387f5fe4c7b484a7609d28ef73f58705c33824e85.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
+        "additionalDependencies": [
+          "Space-Booker.assets"
+        ],
+        "lookupRole": {
+          "arn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-lookup-role-${AWS::AccountId}-${AWS::Region}",
+          "requiresBootstrapStackVersion": 8,
+          "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+        },
+        "stackName": "SpaceBooker"
+      },
+      "dependencies": [
+        "Space-Booker.assets"
+      ],
+      "metadata": {
+        "/Space-Booker/SpaceApi/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SpaceApi1B373D2B"
+          }
+        ],
+        "/Space-Booker/SpaceApi/CloudWatchRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SpaceApiCloudWatchRole2811DDE0"
+          }
+        ],
+        "/Space-Booker/SpaceApi/Account": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SpaceApiAccount1ADAEF20"
+          }
+        ],
+        "/Space-Booker/SpaceApi/Deployment/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SpaceApiDeploymentA2B9E765a6159a5d838b437e77c98df4c41fa1f0"
+          }
+        ],
+        "/Space-Booker/SpaceApi/DeploymentStage.prod/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SpaceApiDeploymentStageprodBB8A31FE"
+          }
+        ],
+        "/Space-Booker/SpaceApi/Endpoint": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SpaceApiEndpointDA7E4050"
+          }
+        ],
+        "/Space-Booker/SpaceApi/Default/hello/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SpaceApihelloDF776653"
+          }
+        ],
+        "/Space-Booker/SpaceApi/Default/hello/GET/ApiPermission.SpaceBookerSpaceApi68FA62A8.GET..hello": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SpaceApihelloGETApiPermissionSpaceBookerSpaceApi68FA62A8GEThello22A2109C"
+          }
+        ],
+        "/Space-Booker/SpaceApi/Default/hello/GET/ApiPermission.Test.SpaceBookerSpaceApi68FA62A8.GET..hello": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SpaceApihelloGETApiPermissionTestSpaceBookerSpaceApi68FA62A8GEThello67D40A57"
+          }
+        ],
+        "/Space-Booker/SpaceApi/Default/hello/GET/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SpaceApihelloGET65983C27"
+          }
+        ],
+        "/Space-Booker/SpacesTable": [
+          {
+            "type": "aws:cdk:hasPhysicalName",
+            "data": {
+              "Ref": "SpacesTable8A997355"
+            }
+          }
+        ],
+        "/Space-Booker/SpacesTable/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SpacesTable8A997355"
+          }
+        ],
+        "/Space-Booker/helloLambdaNodeJs/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "helloLambdaNodeJsServiceRole17C143C3"
+          }
+        ],
+        "/Space-Booker/helloLambdaNodeJs/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "helloLambdaNodeJsServiceRoleDefaultPolicy14D90D8C"
+          }
+        ],
+        "/Space-Booker/helloLambdaNodeJs/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "helloLambdaNodeJs14E63891"
+          }
+        ],
+        "/Space-Booker/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
+          }
+        ],
+        "/Space-Booker/CDKMetadata/Condition": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadataAvailable"
+          }
+        ],
+        "/Space-Booker/BootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BootstrapVersion"
+          }
+        ],
+        "/Space-Booker/CheckBootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CheckBootstrapVersion"
+          }
+        ]
+      },
+      "displayName": "Space-Booker"
+    },
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    }
+  }
+}
