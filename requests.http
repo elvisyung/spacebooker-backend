@@ -1,5 +1,29 @@
 
 @endpoint = https://dp1ky5oyba.execute-api.eu-west-1.amazonaws.com/prod
 
-GET {{endpoint}}/hello/
+GET {{endpoint}}/spaces/
+###
+
+GET {{endpoint}}/spaces?spaceId=eb0997a7-5f2f-4333-b63b-8ce53d98790f
+###
+
+POST {{endpoint}}/spaces/
+Content-Type: application/json
+
+{
+    "location": "London",
+    "name": "Best Location"
+}
+###
+
+// Issue with PUT Request [Others experiencing as well] Solved: comma placement
+PUT {{endpoint}}/spaces?spaceId=eb0997a7-5f2f-4333-b63b-8ce53d98790f
+Content-Type: application/json
+
+{
+    "location": "Updated Location"
+}
+###
+
+DELETE {{endpoint}}/spaces?spaceId=eb0997a7-5f2f-4333-b63b-8ce53d98790f
 ###
